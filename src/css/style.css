@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+}
+/* h3 {
+    margin: 10px 0 5px 0;
+} */
+
+#canvas {
+    position: relative;
+    top: 2px;
+    /* border: 1px dashed red; */
+    /* width: 150px;
+    height: 150px; */
+    z-index: 2;
+}
+/* .wraper {
+    min-height: 500px;
+    text-align: center;    
+} */
+
+.playingField {
+    /* padding: auto; */
+
+}
+
+table {
+    margin: auto;
+    border-collapse:collapse;
+    /* border: 2px solid black; */
+}
+td {
+    width: 55px;
+    height: 55px;
+    border: 2px solid black;
+}
+
+.drawingTools {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+.drawingTools img {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.drawingTools img:hover {
+    border: 2px solid black;  
+
+}
+.settings__number {
+    margin: 0 0 25px 0;
+}
+.message {
+    display: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(33, 11, 236);
+}
+.messageActive {
+    display: block;
+}
+
+span {
+    display: none;
+}
+.spanActive {
+    display: block;
+    font-weight: 14px;
+    color: blueviolet;
+}
+.plyer-O_Active {
+    /* border: 0 10px 0; */
+    text-align: center;
+    border: 2px dotted rgb(31, 187, 44);
+    
+}
+.plyer-X_Active {
+    /* border: 0 10px 0; */
+    text-align: center;
+    border: 2px dotted rgb(31, 187, 44);
+}
+.settings__playingСomputer {
+    text-align: center;
+}
+.clearingOfGame {
+    display: block;
+    margin: 25px auto;
+}
+.buttonActive {
+    background: rgb(9, 115, 185);
+}
+.winner {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 400px;
+    min-height: 100px;
+    border: 2px solid red;
+    text-align: center;
+    z-index: 5;
+    background-color: rgb(151, 166, 199);
+    font-weight: 700;
+    font-size: 20px;
+
+}
+.winnerActive {
+    display: block;
+}
+.winner *{
+    margin: 15px auto 15px auto;
+}

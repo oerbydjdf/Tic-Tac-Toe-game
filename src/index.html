@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <canvas id="canvas"></canvas> -->
+    <div class="wraper">
+        <h1>Игра крестики и нолики</h1>
+        <div class="settings">
+            <div class="settings__playingСomputer">
+                <button class="playingСomputer">Играть с компьютером</button>
+            </div>
+            <div class="settings__drawingTools drawingTools">
+                <div class="drawingTools__plyer-O">
+                    <input hidden type="radio" name="radio__plyer">
+                    
+                    <span>Ваш ход &#9989;</span>
+                    <h2>Игрок - 0</h2>
+                    <img  onclick="selectsColor_O('rgb(255,250,2,255)', event)" src="https://img2.freepng.ru/20180514/skw/kisspng-computer-icons-encapsulated-postscript-crayola-5afa57792563c9.9824471315263558331532.jpg" alt="">
+                    <img  onclick="selectsColor_O('rgb(16,15,15)', event)" src="https://cdn2.iconfinder.com/data/icons/smashicons-office-solid-vol-2/60/51_-Marker-_office_desk_tool_desktop_business-512.png" alt="">
+                    <img  onclick="selectsColor_O('rgb(255,3,0,255)', event)" src="https://img.favpng.com/25/13/20/computer-icons-png-favpng-YeYmXXF8xqzCundgZBKpRexR1.jpg" alt="">
+                    <div class="message">&#129302; Выберите цвет</div>
+                </div>
+                <div>
+                    <h3>Выбери игровое поле.</h3>
+                    <input class="settings__number" type="number" value="3">
+                    <div class="settings__game">
+                        <button class="beginningOfGame">Играть в двоём</button> <br>
+                    </div>
+                </div>
+                
+                <div class="drawingTools__plyer-X">
+                    <input hidden type="radio" name="radio__plyer">
+                    <span>Ваш ход &#9989;</span>
+                    <h2>Игрок - X </h2>                    
+                    <img onclick="selectsColor_X('rgb(255,250,2,255)', event)" src="https://img2.freepng.ru/20180514/skw/kisspng-computer-icons-encapsulated-postscript-crayola-5afa57792563c9.9824471315263558331532.jpg" alt="">
+                    <img onclick="selectsColor_X('rgb(16,15,15)', event)" src="https://cdn2.iconfinder.com/data/icons/smashicons-office-solid-vol-2/60/51_-Marker-_office_desk_tool_desktop_business-512.png" alt="">
+                    <img onclick="selectsColor_X('rgb(255,3,0,255)', event)" src="https://img.favpng.com/25/13/20/computer-icons-png-favpng-YeYmXXF8xqzCundgZBKpRexR1.jpg" alt="">
+                    <div class="message">&#129302; Выберите цвет</div>
+                </div>
+            </div>
+        </div>
+        <div class="playingField"></div>
+        
+        <button class="clearingOfGame">Очистить</button>
+        <div class="winner">
+            <div class="winner__congratulate">Поздравляем!</div>
+            <div class="winner__game">Победитель игрок:</div>  
+            <div class="winner__plyer"></div>
+            <button class="winner__ok">OK</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
