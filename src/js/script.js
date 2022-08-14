@@ -72,6 +72,33 @@ function selectsColor_X(color, e) {
     deleneMessage(colors_X, colors_O);
 };
 
+// function selectsColor(colors, e) {
+//     let target = e.target;
+    
+//     if(target.parentElement.className == 'drawingTools__plyer-O') {
+//         if (colors_O) {
+//             alert('Цвет уже выбран!');
+//             return;
+//         }
+//         colors_O = colors;
+//         target_eO =  e.target.outerHTML;
+//         e.target.style.border = `4px solid ${colors}`;
+//         deleneMessage(colors_X, colors_O);
+
+//     }
+//     if(target.parentElement.className == 'drawingTools__plyer-X') {
+//         if (colors_X) {
+//             alert('Цвет уже выбран!');
+//             return;
+//         }
+//         colors_X = colors;
+//         target_eX =  e.target.outerHTML;
+//         e.target.style.border = `4px solid ${colors}`;
+//         deleneMessage(colors_X, colors_O);
+
+//     }
+// }
+
 
 // Рисум крестик 
 function drawsCross(canvas) {
@@ -377,7 +404,10 @@ function insertData() {
     let radio = Array.from(document.querySelectorAll('[name="radio__plyer"]'));
     let indexChked = localStorage.getItem('indexChked');
     if(indexChked === '0' || indexChked === '1') {
-        radio.forEach(e => e.hidden = false);
+        radio.forEach(e => {
+            if(localStorage.getItem('compActive') === null) return;
+            e.hidden = false;
+        });
         radio[indexChked].click();
         // При клике по радиобатен появится сообщение о выборе цвета, скроем его если цвет уже выбран
         if(colors_O !== undefined || colors_X !== undefined) {
